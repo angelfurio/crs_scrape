@@ -1,0 +1,52 @@
+<head>
+  <title>Course Demand - UGC Program for Academic Cataloguing (UPAC)</title>
+</head>
+
+<table border="1">
+  <tr>
+    <th>Course</th>
+    <th>Projected Demand</th>
+    <th>Passed</th>
+    <th>Failed</th>
+  </tr>
+{% for course in courses %}
+  <tr>
+    <td>{{ course.name }}</td>
+    <td style="text-align: center;">{{ course.must_take_count }}</td>
+    <td style="text-align: center;">{{ course.passed }}</td>
+    <td style="text-align: center;">{{ course.failed }}</td>
+  </tr>
+{% endfor %}
+</table>
+
+{% for course in courses %}
+
+<h1>{{ course.name }} ({{ course.passed }}/{{ course.total }} - {{ course.passing_rate|floatformat:2 }}%)</h1>
+
+  <h2>Grades for {{ course.name }} this semester (BS + MS)</h2>
+
+  {% for key, section in course.sections.items %}
+    <h3>{{ section.title }} ({{ section.passed }}/{{ section.total }} - {{ section.passing_rate|floatformat:2 }}%)</h3>
+
+    <table>
+    {% for grade in section.grades %}
+      <tr><td>{{ grade }}</td></tr>
+    {% endfor %}
+    </table>
+
+  {% endfor %}
+
+
+  <h2>Must take {{ course.name }} next semester (BS only) ({{ course.must_take_count }})</h2>
+
+  <table>
+  {% for taker in course.must_take %}
+
+    <tr><td>{{ taker }}</td></tr>
+
+  {% endfor %}
+  </table>
+
+<hr />
+
+{% endfor %}

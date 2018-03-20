@@ -1,0 +1,66 @@
+<table border="1">
+  <tr>
+    <th>SID</th>
+    <th>Last name</th>
+    <th>First name</th>
+    <th>Standing</th>
+    <th>Credited</th>
+    <th>Left</th>
+    <th>Denied 191</th>
+    <th>Waived junior</th>
+    <th>Experiment</th>
+    <th>Waiving</th>
+    <th>4.00 CS 135</th>
+    <th>11</th>
+    <th>12</th>
+    <th>21</th>
+    <th>30</th>
+    <th>1st 32</th>
+    <th>133</th>
+    <th>135</th>
+    <th>140</th>
+    <th>150</th>
+    <th>M17</th>
+    <th>M53</th>
+    <th>M54</th>
+    <th>M55</th>
+    <th>Total failed</th>
+    <th>CS/Math</th>
+    <th>Others</th>
+    <th>Failed CS/Math</th>
+    <th>Failed others</th>
+  </tr>
+{% for i in info %}
+  <tr>
+    <td>{{ i.sid }}</td>
+    <td>{{ i.last_name }}</td>
+    <td>{{ i.first_name }}</td>
+    <td>{{ i.standing }}</td>
+    <td>{{ i.units_credited }}</td>
+    <td>{{ i.units_left }}</td>
+    <td>{{ i.denied_191 }}</td>
+    <td>{{ i.waive_junior }}</td>
+    <td>{{ i.experiment }}</td>
+    <td>{{ i.passed_junior_waive_units }} / {{ i.total_junior_waive_units }}</td>
+    <td>{{ i.kwatro135 }}</td>
+    <td>{{ i.failed_cs11 }}</td>
+    <td>{{ i.failed_cs12 }}</td>
+    <td>{{ i.failed_cs21 }}</td>
+    <td>{{ i.failed_cs30 }}</td>
+    <td>{{ i.failed_cs32 }}</td>
+    <td>{{ i.failed_cs133 }}</td>
+    <td>{{ i.failed_cs135 }}</td>
+    <td>{{ i.failed_cs140 }}</td>
+    <td>{{ i.failed_cs150 }}</td>
+    <td>{{ i.failed_math17 }}</td>
+    <td>{{ i.failed_math53 }}</td>
+    <td>{{ i.failed_math54 }}</td>
+    <td>{{ i.failed_math55 }}</td>
+    <td>{{ i.total_failed }}</td>
+    <td>{{ i.failed_csmath_count }}</td>
+    <td>{{ i.failed_others_count }}</td>
+    <td>{{ i.failed_csmath }}</td>
+    <td>{{ i.failed_others }}</td>
+  </tr>
+{% endfor %}
+</table>

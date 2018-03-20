@@ -1,0 +1,23 @@
+<h1>Not junior standing during 191 semester</h1>
+<table border="1">
+  <tr>
+    <th>Student ({{ total.0 }})</th>
+    <th>Units passed ({{ total.1 }})</th>
+    <th>At least 73? ({{ total.2 }})</th>
+    <th>At least 70? ({{ total.3 }})</th>
+    <th>At least 67? ({{ total.4 }})</th>
+    <th>At least 60? ({{ total.5 }})</th>
+    <th>At least 57? ({{ total.6 }})</th>
+  </tr>
+{% for i in output %}
+  <tr>
+    <td>{{ i.0 }}</td>
+    <td>{{ i.1 }}</td>
+    <td>{{ i.2 }}</td>
+    <td>{{ i.3 }}</td>
+    <td>{{ i.4 }}</td>
+    <td>{{ i.5 }}</td>
+    <td>{{ i.6 }}</td>
+  </tr>
+{% endfor %}
+</table>

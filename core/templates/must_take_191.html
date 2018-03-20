@@ -1,0 +1,30 @@
+<table border="1">
+  <tr>
+    <th>SID</th>
+    <th>Last name</th>
+    <th>First name</th>
+    <th>Standing</th>
+    <th>Credited</th>
+    <th>Left</th>
+    <th>Must take 191</th>
+    <th>Denied 191</th>
+    <th>Waived junior</th>
+    <th>Experiment</th>
+    <th>Waiving</th>
+  </tr>
+{% for i in info %}
+  <tr>
+    <td>{{ i.sid }}</td>
+    <td>{{ i.last_name }}</td>
+    <td>{{ i.first_name }}</td>
+    <td>{{ i.standing }}</td>
+    <td>{{ i.units_credited }}</td>
+    <td>{{ i.units_left }}</td>
+    <td>{{ i.must_take_191 }}</td>
+    <td>{{ i.denied_191 }}</td>
+    <td>{{ i.waive_junior }}</td>
+    <td>{{ i.experiment }}</td>
+    <td>{{ i.passed_junior_waive_units }} / {{ i.total_junior_waive_units }}</td>
+  </tr>
+{% endfor %}
+</table>

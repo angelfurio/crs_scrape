@@ -1,0 +1,16 @@
+<table border="1">
+  <tr>
+    <th>SID</th>
+    <th>Last name</th>
+    <th>First name</th>
+    <th>Credited</th>
+  </tr>
+{% for i in info %}
+  <tr>
+    <td>{{ i.sid }}</td>
+    <td>{{ i.last_name }}</td>
+    <td>{{ i.first_name }}</td>
+    <td>{{ i.units_credited }}</td>
+  </tr>
+{% endfor %}
+</table>

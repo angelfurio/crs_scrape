@@ -1,0 +1,52 @@
+<table border="1">
+  <tr>
+    <th>SID</th>
+    <th>Last name</th>
+    <th>First name</th>
+    <th>Standing</th>
+    <th>Credited</th>
+    <th>Left</th>
+    <th>Denied 198</th>
+    <th>Denied 191</th>
+    <th>75%</th>
+    <th>Senior CS+Math</th>
+    <th>Waived senior</th>
+    <th>50%</th>
+    <th>Junior CS+Math</th>
+    <th>Waived junior</th>
+    <th>Experiment</th>
+    <th>Waiving</th>
+    <th>Total failed</th>
+    <th>CS/Math</th>
+    <th>Others</th>
+    <th>Failed CS/Math</th>
+    <th>Failed others</th>
+    <th>Credited</th>
+  </tr>
+{% for i in info %}
+  <tr>
+    <td>{{ i.sid }}</td>
+    <td>{{ i.last_name }}</td>
+    <td>{{ i.first_name }}</td>
+    <td>{{ i.standing }}</td>
+    <td>{{ i.units_credited }}</td>
+    <td>{{ i.units_left }}</td>
+    <td>{{ i.denied_198 }}</td>
+    <td>{{ i.denied_191 }}</td>
+    <td>{{ i.passed_75percent_units }}</td>
+    <td>{{ i.senior_curriculum }}</td>
+    <td>{{ i.waive_senior }}</td>
+    <td>{{ i.passed_half_units }}</td>
+    <td>{{ i.junior_curriculum }}</td>
+    <td>{{ i.waive_junior }}</td>
+    <td>{{ i.experiment }}</td>
+    <td>{{ i.passed_junior_waive_units }} / {{ i.total_junior_waive_units }}</td>
+    <td>{{ i.total_failed }}</td>
+    <td>{{ i.failed_csmath_count }}</td>
+    <td>{{ i.failed_others_count }}</td>
+    <td>{{ i.failed_csmath }}</td>
+    <td>{{ i.failed_others }}</td>
+    <td>{{ i.credited_names }}</td>
+  </tr>
+{% endfor %}
+</table>

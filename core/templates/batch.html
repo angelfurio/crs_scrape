@@ -1,0 +1,18 @@
+<table border="1">
+  <tr>
+    <th>Batch</th>
+    <th>SID</th>
+    <th>Last name</th>
+    <th>First name</th>
+  </tr>
+{% for year, values in info %}
+  {% for i in values %}
+  <tr>
+    <td>{{ i.batch }}</td>
+    <td>{{ i.sid }}</td>
+    <td>{{ i.last_name }}</td>
+    <td>{{ i.first_name }}</td>
+  </tr>
+  {% endfor %}
+{% endfor %}
+</table>

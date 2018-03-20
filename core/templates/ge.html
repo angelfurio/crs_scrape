@@ -1,0 +1,26 @@
+<head>
+  <title>GE Issue - UGC Program for Academic Cataloguing (UPAC)</title>
+</head>
+
+<h1>Students</h1>
+<table border="1">
+  <tr>
+    <th>Student</th>
+    <th>GEs</th>
+  </tr>
+{% for student, ges in students %}
+  <tr>
+    <td>{{ student }}</td>
+    <td>{{ ges }}</td>
+  </tr>
+{% endfor %}
+</table>
+
+{% for ge in ge_data %}
+<h1>{{ ge.course }}</h1>
+<table>
+  {% for student in ge.students %}
+    <tr><td>{{ student }}</td></tr>
+  {% endfor %}
+</table>
+{% endfor %}

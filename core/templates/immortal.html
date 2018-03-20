@@ -1,0 +1,72 @@
+<table border="1">
+  <tr>
+    <th>SID</th>
+    <th>Last name</th>
+    <th>First name</th>
+    <th>Batch</th>
+    <th>Credited</th>
+    <th>Left</th>
+    <th>Immortal</th>
+    <th>Subject</th>
+    <th>Unit</th>
+    <th>130</th>
+    <th>133</th>
+    <th>135</th>
+    <th>140</th>
+    <th>191</th>
+    <th>AH</th>
+    <th>SSP</th>
+    <th>MST</th>
+    <th>Eng</th>
+    <th>PH</th>
+    <th>CSE</th>
+    <th>MSE</th>
+    <th>Free</th>
+    <th>Eng 1</th>
+    <th>Comm 3</th>
+    <th>Eng 10</th>
+    <th>Fil 40</th>
+    <th>Kas 1</th>
+    <th>Philo 1</th>
+    <th>STS</th>
+    <th>Remaining required</th>
+    <th>Not credited</th>
+    <th>Credited</th>
+  </tr>
+{% for i in info %}
+  <tr>
+    <td>{{ i.sid }}</td>
+    <td>{{ i.last_name }}</td>
+    <td>{{ i.first_name }}</td>
+    <td>{{ i.batch }}</td>
+    <td>{{ i.units_credited }}</td>
+    <td>{{ i.units_left }}</td>
+    <td>{{ i.immortal }}</td>
+    <td>{{ i.subject_immortality }}</td>
+    <td>{{ i.dean_immortality }}</td>
+    <td>{{ i.passed_cs130 }}</td>
+    <td>{{ i.passed_cs133 }}</td>
+    <td>{{ i.passed_cs135 }}</td>
+    <td>{{ i.passed_cs140 }}</td>
+    <td>{{ i.passed_cs191 }}</td>
+    <td>{{ i.ah_left }}</td>
+    <td>{{ i.ssp_left }}</td>
+    <td>{{ i.mst_left }}</td>
+    <td>{{ i.eng_left }}</td>
+    <td>{{ i.ph_left }}</td>
+    <td>{{ i.cs_elective }}</td>
+    <td>{{ i.mse_elective }}</td>
+    <td>{{ i.free_elective }}</td>
+    <td>{{ i.passed_eng1 }}</td>
+    <td>{{ i.passed_comm3 }}</td>
+    <td>{{ i.passed_eng10 }}</td>
+    <td>{{ i.passed_fil40 }}</td>
+    <td>{{ i.passed_kas1 }}</td>
+    <td>{{ i.passed_philo1 }}</td>
+    <td>{{ i.passed_sts }}</td>
+    <td>{{ i.needed_core_names }}</td>
+    <td>{{ i.not_credited_names }}</td>
+    <td>{{ i.credited_names }}</td>
+  </tr>
+{% endfor %}
+</table>

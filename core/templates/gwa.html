@@ -1,0 +1,22 @@
+<table border="1">
+  <tr>
+    <th>SID</th>
+    <th>Last name</th>
+    <th>First name</th>
+    <th>Batch</th>
+    <th>GWA</th>
+    <th>GWA units</th>
+    <th>Credited</th>
+  </tr>
+{% for i in info %}
+  <tr>
+    <td>{{ i.sid }}</td>
+    <td>{{ i.last_name }}</td>
+    <td>{{ i.first_name }}</td>
+    <td>{{ i.batch }}</td>
+    <td>{{ i.gwa }}</td>
+    <td>{{ i.gwa_units }}</td>
+    <td>{{ i.credited_names }}</td>
+  </tr>
+{% endfor %}
+</table>
